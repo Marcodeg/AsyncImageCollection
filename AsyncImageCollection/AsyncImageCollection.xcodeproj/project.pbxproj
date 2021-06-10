@@ -28,6 +28,7 @@
 		CC49E5032672999E003DD2BC /* OperationQueueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC49E5022672999E003DD2BC /* OperationQueueHandler.swift */; };
 		CC4A062A2672AB4F00E81EDD /* NetworkImageOperationQueueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A06292672AB4F00E81EDD /* NetworkImageOperationQueueHandler.swift */; };
 		CC4A062F2672AE0F00E81EDD /* PopularCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A062E2672AE0F00E81EDD /* PopularCollectionViewDelegate.swift */; };
+		CC4A06352672B2B700E81EDD /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A06342672B2B700E81EDD /* ImageCacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		CC49E5022672999E003DD2BC /* OperationQueueHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationQueueHandler.swift; sourceTree = "<group>"; };
 		CC4A06292672AB4F00E81EDD /* NetworkImageOperationQueueHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageOperationQueueHandler.swift; sourceTree = "<group>"; };
 		CC4A062E2672AE0F00E81EDD /* PopularCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		CC4A06342672B2B700E81EDD /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,11 +162,11 @@
 		CC49E4C526728A75003DD2BC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				CC4A06342672B2B700E81EDD /* ImageCacheManager.swift */,
 				CC49E4DA26728DE0003DD2BC /* NetworkManager.swift */,
 				CC49E4E426728F41003DD2BC /* Coordinator.swift */,
 				CC49E5062672A868003DD2BC /* Operations */,
-				CC49E5022672999E003DD2BC /* OperationQueueHandler.swift */,
-				CC4A06292672AB4F00E81EDD /* NetworkImageOperationQueueHandler.swift */,
+				CC4A06312672B00E00E81EDD /* OperationQueueHandler */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -211,6 +213,15 @@
 				CC49E4F426729358003DD2BC /* NetworkImageOperation.swift */,
 			);
 			path = Operations;
+			sourceTree = "<group>";
+		};
+		CC4A06312672B00E00E81EDD /* OperationQueueHandler */ = {
+			isa = PBXGroup;
+			children = (
+				CC49E5022672999E003DD2BC /* OperationQueueHandler.swift */,
+				CC4A06292672AB4F00E81EDD /* NetworkImageOperationQueueHandler.swift */,
+			);
+			path = OperationQueueHandler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +340,7 @@
 			files = (
 				CC49E5032672999E003DD2BC /* OperationQueueHandler.swift in Sources */,
 				CC49E4D826728D9F003DD2BC /* KeylessURL.swift in Sources */,
+				CC4A06352672B2B700E81EDD /* ImageCacheManager.swift in Sources */,
 				CC49E4F226729328003DD2BC /* AsyncOperation.swift in Sources */,
 				CC4A062A2672AB4F00E81EDD /* NetworkImageOperationQueueHandler.swift in Sources */,
 				CC49E4F8267293D4003DD2BC /* PopularCollectionViewDataSource.swift in Sources */,

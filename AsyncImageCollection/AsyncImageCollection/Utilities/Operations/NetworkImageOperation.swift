@@ -34,9 +34,19 @@ final class NetworkImageOperation: AsyncOperation {
             guard let self = self else { return }
             defer { self.state = .finished }
             guard !self.isCancelled else { return }
+            
+            
+            let cacheID = NSString(string: self.url.absoluteString)
+            if let cachedData = ImageCacheManager.shared.cache.object(forKey: cacheID) {
+                self.image = UIImage(data: cachedData as Data)
+                self.callCompletionHandler(self.image)
+                return
+            }
+            
             switch response.result {
             case .success(let data):
                 guard let data = data else { return }
+                ImageCacheManager.shared.cache.setObject(data as NSData, forKey: cacheID)
                 self.image = UIImage(data: data)
                 self.callCompletionHandler(self.image)
             case .failure(_):
