@@ -20,6 +20,8 @@
 		CC49E4E526728F41003DD2BC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC49E4E426728F41003DD2BC /* Coordinator.swift */; };
 		CC49E4E926728F72003DD2BC /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC49E4E826728F72003DD2BC /* ApplicationCoordinator.swift */; };
 		CC49E4EF26729202003DD2BC /* PopularMoviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC49E4EE26729202003DD2BC /* PopularMoviewViewController.swift */; };
+		CC49E4F226729328003DD2BC /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC49E4F126729328003DD2BC /* AsyncOperation.swift */; };
+		CC49E4F526729358003DD2BC /* NetworkImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC49E4F426729358003DD2BC /* NetworkImageOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		CC49E4E426728F41003DD2BC /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CC49E4E826728F72003DD2BC /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		CC49E4EE26729202003DD2BC /* PopularMoviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviewViewController.swift; sourceTree = "<group>"; };
+		CC49E4F126729328003DD2BC /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		CC49E4F426729358003DD2BC /* NetworkImageOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,8 @@
 			children = (
 				CC49E4DA26728DE0003DD2BC /* NetworkManager.swift */,
 				CC49E4E426728F41003DD2BC /* Coordinator.swift */,
+				CC49E4F126729328003DD2BC /* AsyncOperation.swift */,
+				CC49E4F426729358003DD2BC /* NetworkImageOperation.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -287,12 +293,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC49E4D826728D9F003DD2BC /* KeylessURL.swift in Sources */,
+				CC49E4F226729328003DD2BC /* AsyncOperation.swift in Sources */,
 				CC49E4DF26728E35003DD2BC /* NetworkResponse.swift in Sources */,
 				CC49E4D226728D64003DD2BC /* MovieRepository.swift in Sources */,
 				CC49E4DB26728DE0003DD2BC /* NetworkManager.swift in Sources */,
 				CC49E4E926728F72003DD2BC /* ApplicationCoordinator.swift in Sources */,
 				CC49E4A726728855003DD2BC /* AppDelegate.swift in Sources */,
 				CC49E4CF26728D45003DD2BC /* Movie.swift in Sources */,
+				CC49E4F526729358003DD2BC /* NetworkImageOperation.swift in Sources */,
 				CC49E4EF26729202003DD2BC /* PopularMoviewViewController.swift in Sources */,
 				CC49E4D526728D7B003DD2BC /* MovieNetworkRepository.swift in Sources */,
 				CC49E4E526728F41003DD2BC /* Coordinator.swift in Sources */,
