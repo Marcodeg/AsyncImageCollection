@@ -22,6 +22,12 @@
 		CC49E4EF26729202003DD2BC /* PopularMoviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC49E4EE26729202003DD2BC /* PopularMoviewViewController.swift */; };
 		CC49E4F226729328003DD2BC /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC49E4F126729328003DD2BC /* AsyncOperation.swift */; };
 		CC49E4F526729358003DD2BC /* NetworkImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC49E4F426729358003DD2BC /* NetworkImageOperation.swift */; };
+		CC49E4F8267293D4003DD2BC /* PopularCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC49E4F7267293D4003DD2BC /* PopularCollectionViewDataSource.swift */; };
+		CC49E4FD26729411003DD2BC /* PosterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC49E4FB26729411003DD2BC /* PosterCollectionViewCell.swift */; };
+		CC49E4FE26729411003DD2BC /* PosterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC49E4FC26729411003DD2BC /* PosterCollectionViewCell.xib */; };
+		CC49E5032672999E003DD2BC /* OperationQueueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC49E5022672999E003DD2BC /* OperationQueueHandler.swift */; };
+		CC4A062A2672AB4F00E81EDD /* NetworkImageOperationQueueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A06292672AB4F00E81EDD /* NetworkImageOperationQueueHandler.swift */; };
+		CC4A062F2672AE0F00E81EDD /* PopularCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A062E2672AE0F00E81EDD /* PopularCollectionViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +50,12 @@
 		CC49E4EE26729202003DD2BC /* PopularMoviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviewViewController.swift; sourceTree = "<group>"; };
 		CC49E4F126729328003DD2BC /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		CC49E4F426729358003DD2BC /* NetworkImageOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageOperation.swift; sourceTree = "<group>"; };
+		CC49E4F7267293D4003DD2BC /* PopularCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		CC49E4FB26729411003DD2BC /* PosterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCollectionViewCell.swift; sourceTree = "<group>"; };
+		CC49E4FC26729411003DD2BC /* PosterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PosterCollectionViewCell.xib; sourceTree = "<group>"; };
+		CC49E5022672999E003DD2BC /* OperationQueueHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationQueueHandler.swift; sourceTree = "<group>"; };
+		CC4A06292672AB4F00E81EDD /* NetworkImageOperationQueueHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageOperationQueueHandler.swift; sourceTree = "<group>"; };
+		CC4A062E2672AE0F00E81EDD /* PopularCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				CC49E4EE26729202003DD2BC /* PopularMoviewViewController.swift */,
+				CC49E4F7267293D4003DD2BC /* PopularCollectionViewDataSource.swift */,
+				CC4A062E2672AE0F00E81EDD /* PopularCollectionViewDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -138,6 +152,7 @@
 		CC49E4C426728A51003DD2BC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CC49E4FA267293EB003DD2BC /* CollectionViewCells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,8 +162,9 @@
 			children = (
 				CC49E4DA26728DE0003DD2BC /* NetworkManager.swift */,
 				CC49E4E426728F41003DD2BC /* Coordinator.swift */,
-				CC49E4F126729328003DD2BC /* AsyncOperation.swift */,
-				CC49E4F426729358003DD2BC /* NetworkImageOperation.swift */,
+				CC49E5062672A868003DD2BC /* Operations */,
+				CC49E5022672999E003DD2BC /* OperationQueueHandler.swift */,
+				CC4A06292672AB4F00E81EDD /* NetworkImageOperationQueueHandler.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -177,6 +193,24 @@
 				CC49E4D126728D64003DD2BC /* MovieRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		CC49E4FA267293EB003DD2BC /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				CC49E4FB26729411003DD2BC /* PosterCollectionViewCell.swift */,
+				CC49E4FC26729411003DD2BC /* PosterCollectionViewCell.xib */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		CC49E5062672A868003DD2BC /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				CC49E4F126729328003DD2BC /* AsyncOperation.swift */,
+				CC49E4F426729358003DD2BC /* NetworkImageOperation.swift */,
+			);
+			path = Operations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC49E4B326728858003DD2BC /* LaunchScreen.storyboard in Resources */,
+				CC49E4FE26729411003DD2BC /* PosterCollectionViewCell.xib in Resources */,
 				CC49E4B026728858003DD2BC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,12 +327,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC49E5032672999E003DD2BC /* OperationQueueHandler.swift in Sources */,
 				CC49E4D826728D9F003DD2BC /* KeylessURL.swift in Sources */,
 				CC49E4F226729328003DD2BC /* AsyncOperation.swift in Sources */,
+				CC4A062A2672AB4F00E81EDD /* NetworkImageOperationQueueHandler.swift in Sources */,
+				CC49E4F8267293D4003DD2BC /* PopularCollectionViewDataSource.swift in Sources */,
 				CC49E4DF26728E35003DD2BC /* NetworkResponse.swift in Sources */,
 				CC49E4D226728D64003DD2BC /* MovieRepository.swift in Sources */,
+				CC4A062F2672AE0F00E81EDD /* PopularCollectionViewDelegate.swift in Sources */,
 				CC49E4DB26728DE0003DD2BC /* NetworkManager.swift in Sources */,
 				CC49E4E926728F72003DD2BC /* ApplicationCoordinator.swift in Sources */,
+				CC49E4FD26729411003DD2BC /* PosterCollectionViewCell.swift in Sources */,
 				CC49E4A726728855003DD2BC /* AppDelegate.swift in Sources */,
 				CC49E4CF26728D45003DD2BC /* Movie.swift in Sources */,
 				CC49E4F526729358003DD2BC /* NetworkImageOperation.swift in Sources */,
