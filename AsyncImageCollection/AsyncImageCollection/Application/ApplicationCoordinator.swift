@@ -17,7 +17,7 @@ class ApplicationCoordinator: Coordinator {
     }
 
     func start() {
-        let vc = ViewController()
+        let vc = PopularMoviesViewController(movieRepository: MovieNetworkRepository())
         navigationController.pushViewController(vc, animated: false)
     }
 }
