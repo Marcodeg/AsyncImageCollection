@@ -29,19 +29,19 @@ final class NetworkImageOperation: AsyncOperation {
     }
     
     override func main() {
-        let task = NetworkManager.shared.session.request(url)
-        task.response { [weak self] (response) in
+        defer { self.state = .finished }
+        guard !self.isCancelled else { return }
+
+        let cacheID = NSString(string: self.url.absoluteString)
+        if let cachedData = ImageCacheManager.shared.cache.object(forKey: cacheID) {
+            self.image = UIImage(data: cachedData as Data)
+            self.callCompletionHandler(self.image)
+            return
+        }
+        guard !self.isCancelled else { return }
+        task = NetworkManager.shared.session.request(url)
+        task?.response { [weak self] (response) in
             guard let self = self else { return }
-            defer { self.state = .finished }
-            guard !self.isCancelled else { return }
-            
-            
-            let cacheID = NSString(string: self.url.absoluteString)
-            if let cachedData = ImageCacheManager.shared.cache.object(forKey: cacheID) {
-                self.image = UIImage(data: cachedData as Data)
-                self.callCompletionHandler(self.image)
-                return
-            }
             
             switch response.result {
             case .success(let data):
