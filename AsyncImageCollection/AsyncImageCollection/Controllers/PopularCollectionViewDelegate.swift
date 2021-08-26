@@ -18,6 +18,7 @@ class PopularCollectionViewDelegate: NSObject, UICollectionViewDelegate, UIColle
     init(operationQueueHandler: NetworkImageOperationQueueHandler) {
         self.operationQueueHandler = operationQueueHandler
     }
+    
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         operationQueueHandler.cancelExistingOperation(indexPath)
     }
